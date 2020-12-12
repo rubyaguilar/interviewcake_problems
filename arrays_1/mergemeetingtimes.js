@@ -19,21 +19,19 @@ function sortStartTimes(times){
 
 function mergeRanges(meetings){     
     sorted = sortStartTimes(meetings) 
-    //what does this mean for the edge case: range exist inside each other, how do we check for this 
     var i = 0; 
     while(i < sorted.length-1){
-      if(sorted[i].endTime >= sorted[i+1].startTime) { 
-        if(sorted[i].endTime >= sorted[i+1].endTime){
-          sorted.splice(i+1, 1) //remove inner overrlap 
-        } else if (sorted[i].endTime < sorted[i+1].endTime){
+      if(sorted[i].endTime >= sorted[i+1].startTime) { //the base case for an overrlap 
+        if(sorted[i].endTime >= sorted[i+1].endTime){ //remove inner overrlap 
+          sorted.splice(i+1, 1) 
+        } else if (sorted[i].endTime < sorted[i+1].endTime){ //remove outside overlap  
           sorted[i].endTime = sorted[i+1].endTime
-          sorted.splice(i+1,1) //overlap overlap merge 
-          //don't advance bc need to check for more afterwards 
+          sorted.splice(i+1,1) 
         } else {
           i++;
         }
       } else {
-        i++; //no issues, keep going
+        i++; //no base issues, keep going
       }
     }
       
