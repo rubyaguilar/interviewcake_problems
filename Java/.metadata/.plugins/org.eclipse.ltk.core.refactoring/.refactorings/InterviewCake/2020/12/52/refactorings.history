@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;arrays.mergeSorted&apos; to &apos;MergeSorted&apos;&#x0A;- Original project: &apos;InterviewCake&apos;&#x0A;- Original element: &apos;arrays.mergeSorted&apos;&#x0A;- Renamed element: &apos;arrays.MergeSorted&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;mergeSorted&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;arrays{mergeSorted.java[mergeSorted" matchStrategy="1" name="MergeSorted" qualified="false" references="true" similarDeclarations="false" stamp="1608476786327" textual="false" version="1.0"/>
-</session>
