@@ -34,4 +34,4 @@ function compressWord(word, k) {
 }
 
 
-compressWord("abbcccb", 2) 
+console.log(compressWord("abbcccb", 2));
